@@ -82,6 +82,34 @@ MINOR_ARCANA = [
     "The King of Pentacles",
 ]
 
+BCAD_MAJOR_ARCANA = {
+    "base_url": "https://bcad-major-arcana.s3.amazonaws.com/",
+    "cards": {
+        "The Fool": {"fname": "The+Fool.png"},
+        "The Magician": {"fname": "The+Magician.png"},
+        "The High Priestess": {"fname": "The+High+Priestess.png"},
+        "The Empress": {"fname": "The+Empress.png"},
+        "The Emperor": {"fname": "The+Emperor.png"},
+        "The Hierophant": {"fname": "The+Hierophant.png"},
+        "The Lovers": {"fname": "The+Lovers.png"},
+        "The Chariot": {"fname": "The+Chariot.png"},
+        "Strength": {"fname": "Strength.png"},
+        "The Hermit": {"fname": "The+Hermit.png"},
+        "Wheel of Fortune": {"fname": "Wheel+of+Fortune.png"},
+        "Justice": {"fname": "Justice.png"},
+        "The Hanged Man": {"fname": "The+Hanged+Man.png"},
+        "Death": {"fname": "Death.png"},
+        "Temperance": {"fname": "Temperance.png"},
+        "The Devil": {"fname": "The+Devil.png"},
+        "The Tower": {"fname": "The+Tower.png"},
+        "The Star": {"fname": "The+Star.png"},
+        "The Moon": {"fname": "The+Moon.png"},
+        "The Sun": {"fname": "The+Sun.png"},
+        "Judgement": {"fname": "Judgement.png"},
+        "The World": {"fname": "The+World.png"},
+    }
+}
+
 ABRAHAM_TAROT = {
     "base_url": "https://abraham-tarot.s3.us-west-1.amazonaws.com/",
     "cards": {

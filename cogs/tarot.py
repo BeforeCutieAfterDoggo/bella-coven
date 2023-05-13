@@ -44,7 +44,8 @@ class NextActionButtonView(discord.ui.View):
 class TarotCog(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
-        self.active_deck = resources.ABRAHAM_TAROT
+        self.active_major_deck = resources.BCAD_MAJOR_ARCANA
+        self.active_minor_deck = resources.ABRAHAM_TAROT
         self.is_reading = False
         self.prefix_fns = [prompts.q1_prefix, prompts.q2_prefix, prompts.q3_prefix]
 
@@ -125,7 +126,9 @@ class TarotCog(commands.Cog):
                 ]
 
     async def get_card_image(self, card_name):
-        image_url = f"{self.active_deck['base_url']}{self.active_deck['cards'][card_name]['fname']}"
+        is_major = card_name in resources.MAJOR_ARCANA
+        deck = self.active_major_deck if is_major else self.active_minor_deck
+        image_url = f"{deck['base_url']}{deck['cards'][card_name]['fname']}"
         async with aiohttp.ClientSession() as session:
             async with session.get(image_url) as resp:
                 if resp.status != 200:
