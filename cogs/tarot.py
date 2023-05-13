@@ -44,8 +44,8 @@ class NextActionButtonView(discord.ui.View):
 class TarotCog(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
-        self.active_major_deck = resources.BCAD_MAJOR_ARCANA
-        self.active_minor_deck = resources.ABRAHAM_TAROT
+        self.active_major_deck = resources.BCAD_TAROT
+        self.active_minor_deck = resources.BCAD_TAROT
         self.is_reading = False
         self.prefix_fns = [prompts.q1_prefix, prompts.q2_prefix, prompts.q3_prefix]
 
